@@ -1,4 +1,3 @@
-import React from 'react';
 import sampleImage from '../assets/office.jpg';
 import '../index.css';
 

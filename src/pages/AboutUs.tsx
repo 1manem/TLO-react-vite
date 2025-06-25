@@ -1,4 +1,3 @@
-import React from 'react';
 import stockImage2 from '../assets/stockimage2.jpg';
 
 const AboutUs = () => {

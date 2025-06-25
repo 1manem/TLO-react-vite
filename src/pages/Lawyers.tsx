@@ -1,4 +1,3 @@
-import React from 'react';
 import lawyerImg from '../assets/lawyer 1.jpg'; // update path if needed
 
 const Lawyers = () => {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import sampleImage from '../assets/office.jpg';
 import stockImage from '../assets/stockimage.png';
 import '../index.css';
