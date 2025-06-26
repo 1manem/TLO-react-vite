@@ -1,4 +1,4 @@
-import lawyerImg from '../assets/Lawyer 1.jpg'; // update path if needed
+import lawyerImg from '../assets/Lawyer1.jpg'; // update path if needed
 
 const Lawyers = () => {
   return (
