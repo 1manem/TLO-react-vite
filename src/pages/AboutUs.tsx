@@ -1,4 +1,4 @@
-import stockImage2 from 'src/assets/stockimage2.jpg';
+import stockImage2 from '../assets/stockimage2.jpg';
 
 const AboutUs = () => {
   return (

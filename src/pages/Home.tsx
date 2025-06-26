@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import sampleImage from 'src/assets/office.jpg';
-import stockImage from 'src/assets/stockimage.png';
+import sampleImage from '../assets/office.jpg';
+import stockImage from '../assets/stockimage.png';
 import '../index.css';
 import { useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
