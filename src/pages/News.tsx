@@ -1,4 +1,4 @@
-import sampleImage from '../assets/office.jpg';
+import sampleImage from 'src/assets/office.jpg';
 import '../index.css';
 
 const News = () => {
