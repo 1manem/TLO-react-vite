@@ -1,4 +1,4 @@
-import lawyerImg from 'src/assets/lawyer1.jpg'; 
+import lawyerImg from '../assets/lwyr1.jpg'; 
 
 const Lawyers = () => {
   return (
