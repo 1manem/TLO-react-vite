@@ -13,6 +13,7 @@ import Mergers from './pages/Mergers';
 import Commercial from './pages/Commercial';
 import CapitalMarkets from './pages/CapitalMarkets';
 import Restructuring from './pages/Restructuring';
+import Career from "./pages/Career";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/principal-values" element={<PrincipalValues />} /> 
         <Route path="/lawyers" element={<Lawyers />} />
         <Route path="/practice-areas" element={<PracticeAreas />} />
+        <Route path="/careers" element={<Career />} /> {/* ✅ Fixed path */}
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/practice/corporate-finance" element={<Finance />} />

@@ -32,8 +32,10 @@ const Header = () => {
     },
     { name: 'Lawyers', path: '/lawyers' },
     { name: 'News', path: '/news' },
+    { name: 'Careers', path: '/careers' }, // ✅ New menu item added here
     { name: 'Contact Us', path: '/contact' },
   ];
+
 
   useEffect(() => {
     const checkMobile = () => {
@@ -89,7 +91,7 @@ const Header = () => {
                     <NavLink
                       to={item.path ?? '#'}
                       className={({ isActive: navActive }) =>
-                        `text-[18px] sm:text-[17px] md:text-[16px] lg:text-[15px] xl:text-[14px] font-semibold font-serif hover:underline ${
+                        `text-[15px] font-semibold font-dmsans hover:underline ${
                           navActive || isActive ? 'text-white' : 'text-black'
                         }`
                       }
@@ -99,7 +101,7 @@ const Header = () => {
                   ) : (
                     <>
                       <div
-                        className={`flex items-center text-[18px] sm:text-[17px] md:text-[16px] lg:text-[15px] xl:text-[14px] font-semibold font-serif gap-1 cursor-default ${
+                        className={`flex items-center text-[15px] font-semibold font-dmsans gap-1 cursor-default ${
                           isActive ? 'text-white' : 'text-black'
                         }`}
                       >
@@ -121,7 +123,7 @@ const Header = () => {
                             key={sub.name}
                             to={sub.path}
                             className={({ isActive: subActive }) =>
-                              `block px-4 py-2 text-[16px] sm:text-[15px] md:text-[14px] lg:text-[13px] whitespace-nowrap font-serif ${
+                              `block px-4 py-2 text-[14px] font-dmsans whitespace-nowrap ${
                                 subActive ? 'bg-[#8A8888]/80 text-white' : 'text-black hover:bg-[#8A8888]/70'
                               }`
                             }
@@ -167,9 +169,7 @@ const Header = () => {
                     <NavLink
                       to={item.path}
                       className={({ isActive }) =>
-                        `text-[18px] sm:text-[16px] md:text-[15px] lg:text-[14px] font-serif hover:underline ${
-                          isActive ? 'text-white' : 'text-black'
-                        }`
+                        `text-[16px] font-dmsans hover:underline ${isActive ? 'text-white' : 'text-black'}`
                       }
                       onClick={() => setIsOpen(false)}
                     >
@@ -178,7 +178,7 @@ const Header = () => {
                   ) : (
                     <div className="flex flex-col w-full">
                       <div
-                        className="text-[18px] sm:text-[16px] md:text-[15px] lg:text-[14px] font-serif text-black flex items-center justify-between w-full hover:underline cursor-pointer"
+                        className="text-[16px] font-dmsans text-black flex items-center justify-between w-full hover:underline cursor-pointer"
                         onClick={() => setOpenSubmenu(isSubmenuOpen ? null : item.name)}
                       >
                         {item.name}
@@ -196,7 +196,7 @@ const Header = () => {
                             <NavLink
                               key={sub.name}
                               to={sub.path}
-                              className="text-[16px] sm:text-[15px] md:text-[14px] lg:text-[13px] font-serif text-black hover:underline"
+                              className="text-[14px] font-dmsans text-black hover:underline"
                               onClick={() => {
                                 setIsOpen(false);
                                 setOpenSubmenu(null);
