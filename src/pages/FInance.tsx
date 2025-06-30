@@ -8,7 +8,7 @@ const Finance = () => {
   });
 
   return (
-    <div ref={ref} className="bg[#8B0000] flex flex-col lg:flex-row min-h-[54.7vh]">
+    <div ref={ref} className="bg-[#8B0000] flex flex-col lg:flex-row min-h-[54.7vh]">
       {/* Left: Title */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -28,7 +28,7 @@ const Finance = () => {
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
         className="w-full lg:w-3/5 bg-[#8B0000] text-white flex items-center justify-center p-10"
       >
-        <p className="max-w-3xl text-lg sm:text-xl lg:text-2xl font-roboto-condensed font-bold leading-relaxed text-justify">
+        <p className="max-w-3xl text-lg sm:text-xl lg:text-3xl font-roboto-condensed font-bold leading-relaxed text-justify">
           TLO Advocates represents a wide range of multinational banks and financial institutions as lenders, arrangers or agents as well as borrowers and collateral providers in various types of financing and refinancing activities. We possess extensive and up-to-date knowledge on Indonesian banking and financial institutions regulations and policies and maintain good relationship with banking and financial authorities in Indonesia.
         </p>
       </motion.div>
