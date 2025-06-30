@@ -8,7 +8,7 @@ const Finance = () => {
   });
 
   return (
-    <div ref={ref} className="flex flex-col lg:flex-row min-h-[54.7vh]">
+    <div ref={ref} className="bg[#8B0000] flex flex-col lg:flex-row min-h-[54.7vh]">
       {/* Left: Title */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}

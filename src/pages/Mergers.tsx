@@ -7,7 +7,7 @@ const Mergers = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
       viewport={{ once: true }}
-      className="flex flex-col lg:flex-row min-h-[54.7vh]"
+      className="bg[#8B0000] flex flex-col lg:flex-row min-h-[54.7vh]"
     >
       <div className="w-full lg:w-2/5 bg-[#E5E5E5] flex items-center justify-center p-10">
         <h2 className="text-[#B91C1B] font-roboto-condensed text-3xl sm:text-4xl lg:text-5xl font-bold text-center leading-snug">
