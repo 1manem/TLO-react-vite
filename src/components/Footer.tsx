@@ -1,52 +1,55 @@
-const Career = () => {
+import { FaInstagram, FaLinkedin, FaFacebook } from 'react-icons/fa';
+
+const Footer = () => {
   return (
-    <main className="flex-1 bg-[#8B0000] text-white font-roboto-condensed px-6 sm:px-10 py-16">
-      <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-[clamp(2rem,6vw,4rem)] font-bold mb-8">Careers at TLO Advocates</h1>
-        <p className="text-[clamp(1rem,2.5vw,1.5rem)] mb-12">
-          At TLO, we believe in nurturing talent and building a future together.
-          We offer a dynamic and inclusive workplace for professionals who value
-          integrity, collaboration, and growth.
-        </p>
+    <footer className="bg-[#9B999A] text-white px-6 sm:px-10 py-12 text-left">
+      <div className="max-w-[1440px] mx-auto space-y-6">
+        {/* Contact Info */}
+        <div>
+          <h2 className="font-roboto text-[clamp(1.25rem,2vw,20px)] font-bold mb-2">TLO Advocates</h2>
+          <p className="font-roboto-condensed text-[clamp(1.25rem,2vw,20px)] font-normal leading-snug">
+            22nd Floor, Menara Imperium<br />
+            Jl. H.R. Rasuna Said Kav. 1,<br />
+            Jakarta 12980,<br />
+            Indonesia
+          </p>
+        </div>
 
-        <div className="text-left space-y-10">
-          <section>
-            <h2 className="text-[clamp(1.5rem,4vw,2rem)] font-semibold mb-4">Why Work With Us?</h2>
-            <ul className="list-disc list-inside space-y-2 text-[clamp(1rem,2.5vw,1.25rem)]">
-              <li>Exposure to high-profile legal matters across industries</li>
-              <li>Supportive mentorship and professional development</li>
-              <li>Flexible, inclusive, and collaborative work culture</li>
-              <li>Opportunities for long-term career advancement</li>
-            </ul>
-          </section>
+        <hr className="border-t border-white/50" />
 
-          <section>
-            <h2 className="text-[clamp(1.5rem,4vw,2rem)] font-semibold mb-4">Current Openings</h2>
-            <p className="text-[clamp(1rem,2.5vw,1.25rem)]">
-              We are currently hiring for:
-            </p>
-            <ul className="list-disc list-inside mt-2 space-y-2 text-[clamp(1rem,2.5vw,1.25rem)]">
-              <li>Junior Associate – Corporate Law</li>
-              <li>Legal Intern – Summer Program 2025</li>
-            </ul>
-            <p className="mt-4 text-[clamp(1rem,2.5vw,1.25rem)]">
-              To apply, send your CV and cover letter to:{" "}
-              <a href="mailto:careers@tlofirm.com" className="text-blue-300 hover:underline">
-                careers@tlofirm.com
-              </a>
-            </p>
-          </section>
+        {/* Social & Copyright */}
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div className="flex gap-6">
+            <a
+              href="https://www.instagram.com/tloadvocates/"
+              aria-label="Instagram"
+              className="text-white text-2xl hover:text-black transition-colors"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://id.linkedin.com/company/tloadvocates"
+              aria-label="LinkedIn"
+              className="text-white text-2xl hover:text-black transition-colors"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://www.facebook.com/people/TLO-Advocates/100068967224468/"
+              aria-label="Facebook"
+              className="text-white text-2xl hover:text-black transition-colors"
+            >
+              <FaFacebook />
+            </a>
+          </div>
 
-          <section>
-            <h2 className="text-[clamp(1.5rem,4vw,2rem)] font-semibold mb-4">Internships</h2>
-            <p className="text-[clamp(1rem,2.5vw,1.25rem)]">
-              Our internship programs give students and recent graduates hands-on experience in real legal work, guided by our team of experienced professionals.
-            </p>
-          </section>
+          <p className="text-sm font-roboto-condensed text-white/80">
+            © {new Date().getFullYear()} TLO Advocates. All rights reserved.
+          </p>
         </div>
       </div>
-    </main>
+    </footer>
   );
 };
 
-export default Career;
+export default Footer;
