@@ -1,6 +1,6 @@
 const Career = () => {
   return (
-    <main className="flex-1 bg-[#8B0000] text-white font-roboto-condensed px-6 sm:px-10 py-24">
+    <main className="flex-1 bg-[#ECECEC] text-[#660000] font-roboto-condensed px-6 sm:px-10 py-24">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-[clamp(2rem,6vw,4rem)] font-bold mb-8">Careers at TLO Advocates</h1>
         <p className="text-[clamp(1rem,2.5vw,1.5rem)] mb-12">
@@ -31,7 +31,7 @@ const Career = () => {
             </ul>
             <p className="mt-4 text-[clamp(1rem,2.5vw,1.25rem)]">
               To apply, send your CV and cover letter to:{" "}
-              <a href="mailto:careers@tlofirm.com" className="text-blue-300 hover:underline">
+              <a href="mailto:careers@tlofirm.com" className="text-blue-600 hover:underline">
                 careers@tlofirm.com
               </a>
             </p>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import sampleImage from '../assets/office.jpg';
-import stockImage from '../assets/stockimage.png';
+import stockImage from '../assets/jktmalam2.jpg';
 import '../index.css';
 import { useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -202,14 +202,14 @@ const Home = () => {
             </h2>
             <button
               onClick={() => navigate('/lawyers')}
-              className="px-6 py-3 rounded bg-[#B91C1B] text-white font-bold font-roboto-condensed text-lg transition-colors duration-300 hover:bg-[#9a1717] active:bg-[#7d1414]"
+              className="px-6 py-3 rounded bg-[#660000] text-white font-bold font-roboto-condensed text-lg transition-colors duration-300 hover:bg-[#9a1717] active:bg-[#7d1414]"
             >
               MEET OUR LAWYERS
             </button>
           </div>
 
           {/* Right Side - Description */}
-          <div className="w-full lg:w-1/2 bg-[#B91C1B] text-white p-6 sm:p-10 flex items-center">
+          <div className="w-full lg:w-1/2 bg-[#660000] text-white p-6 sm:p-10 flex items-center">
             <p className="text-right font-bold font-roboto-condensed text-[clamp(1.25rem,3vw,28px)] leading-relaxed">
               TLO Advocates strives to develop the finest lawyers. We take extra steps to develop our lawyers to maximize the important qualities of intelligence, integrity, creativity, excellence, commitment and staying power. All lawyers at TLO Advocates provide thoughtful yet practical and results-oriented legal advice and practice law with integrity and commitment that focus only on clients' interests.
             </p>

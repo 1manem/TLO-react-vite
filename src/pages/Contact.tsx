@@ -9,7 +9,7 @@ const Contact = () => {
   const [showAddress, setShowAddress] = useState(false);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#910000] to-[#660000] text-white px-6 py-24">
+    <main className="min-h-screen bg-gradient-to-br from-[#660000] to-[#660000] text-white px-6 py-24">
       <div className="w-full max-w-4xl mx-auto space-y-10 text-left">
         <h1 className="text-[clamp(1.5rem,4vw,3rem)] font-bold font-roboto-condensed">
           For more information, please contact:
