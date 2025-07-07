@@ -4,13 +4,17 @@ import lawyerImg1 from '../assets/lawyer1.png';
 import lawyerImg2 from '../assets/lawyer2.png';
 import lawyerImg3 from '../assets/lawyer3.png';
 
+
 const lawyersData = [
   {
     name: 'Rudy Eliezer Tiendas',
     language: 'English and Indonesia',
     image: lawyerImg1,
-    bio: `Rudy Eliezer Tiendas is the founder of TLO Advocates. He has practiced as a lawyer in Indonesia since 1993. Mr. Tiendas is a licensed advocate and a registered capital markets lawyer with the Indonesian Financial Services Authority (Otoritas Jasa Keuangan).'
-     'Rudy is a member of Indonesian Advocates Association (PERADI), Capital Markets Legal Consultant Association (HKHPM) and Inter Pacific-Bar Association.`,
+    bio: `Rudy Eliezer Tiendas is the founder of TLO Advocates. He has practiced as a lawyer in Indonesia since 1993. 
+    Mr. Tiendas is a licensed advocate and a registered capital markets lawyer with the Indonesian Financial Services Authority (Otoritas Jasa Keuangan).
+
+    Rudy is a member of Indonesian Advocates Association (PERADI), Capital Markets Legal Consultant Association (HKHPM), and Inter Pacific-Bar Association. 
+    With over three decades of legal experience, Rudy has built a reputation for integrity, precision, and dedication to client success.`,
   },
   {
     name: 'Ajeng',
@@ -20,7 +24,7 @@ const lawyersData = [
   },
   {
     name: 'Chelsy',
-    language: 'English, Indonesia, Mandarin',
+    language: 'English and Indonesia',
     image: lawyerImg3,
     bio: `Chelsy has a solid background in mergers and acquisitions and capital markets. Known for her analytical thinking and dedication, she delivers strategic legal advice.`,
   },
