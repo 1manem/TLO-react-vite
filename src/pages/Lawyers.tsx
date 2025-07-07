@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { X } from 'lucide-react';
 import lawyerImg1 from '../assets/lawyer1.png';
-import lawyerImg2 from '../assets/lawyer2.jpg';
-import lawyerImg3 from '../assets/lawyer3.jpg';
+import lawyerImg2 from '../assets/lawyer2.png';
+import lawyerImg3 from '../assets/lawyer3.png';
 
 const lawyersData = [
   {
