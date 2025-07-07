@@ -14,6 +14,7 @@ import Commercial from './pages/Commercial';
 import CapitalMarkets from './pages/CapitalMarkets';
 import Restructuring from './pages/Restructuring';
 import Career from "./pages/Career";
+import Admin from "./pages/Admin"
 
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
         <Route path="/principal-values" element={<PrincipalValues />} /> 
         <Route path="/lawyers" element={<Lawyers />} />
         <Route path="/practice-areas" element={<PracticeAreas />} />
-        <Route path="/careers" element={<Career />} /> {/* ✅ Fixed path */}
+        <Route path="/careers" element={<Career />} /> 
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/practice/corporate-finance" element={<Finance />} />
@@ -33,6 +34,7 @@ const App = () => {
         <Route path="/practice/capital-markets" element={<CapitalMarkets />} />
         <Route path="/practice/corporate-commercial" element={<Commercial />} />
         <Route path="/practice/restructuring-insolvency" element={<Restructuring />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
       <Footer />
     </div>

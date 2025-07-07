@@ -32,8 +32,9 @@ const Header = () => {
     },
     { name: 'Lawyers', path: '/lawyers' },
     { name: 'News', path: '/news' },
-    { name: 'Careers', path: '/careers' }, // ✅ New menu item added here
+    { name: 'Careers', path: '/careers' }, 
     { name: 'Contact Us', path: '/contact' },
+    { name: 'Admn', path: '/admin' },
   ];
 
 

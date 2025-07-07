@@ -1,49 +1,121 @@
+import { useState } from 'react';
+
 const Career = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    position: '',
+    coverLetter: '',
+  });
+
+  const [selectedFile, setSelectedFile] = useState<File | null>(null); // ✅ For resume file
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      setSelectedFile(e.target.files[0]);
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!selectedFile) {
+      alert('Please upload a resume file.');
+      return;
+    }
+
+    const formPayload = new FormData();
+    formPayload.append('name', formData.name);
+    formPayload.append('email', formData.email);
+    formPayload.append('position', formData.position);
+    formPayload.append('coverLetter', formData.coverLetter);
+    formPayload.append('resume', selectedFile); // ✅ Must match backend field
+
+    try {
+      const res = await fetch('http://localhost:5000/api/apply', {
+        method: 'POST',
+        body: formPayload,
+      });
+
+      const data = await res.json();
+      alert(data.message);
+      setFormData({ name: '', email: '', position: '', coverLetter: '' });
+      setSelectedFile(null);
+    } catch (error) {
+      alert('Failed to submit application.');
+    }
+  };
+
   return (
     <main className="flex-1 bg-[#ECECEC] text-[#660000] font-roboto-condensed px-6 sm:px-10 py-24">
-      <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-[clamp(2rem,6vw,4rem)] font-bold mb-8">Careers at TLO Advocates</h1>
-        <p className="text-[clamp(1rem,2.5vw,1.5rem)] mb-12">
-          At TLO, we believe in nurturing talent and building a future together.
-          We offer a dynamic and inclusive workplace for professionals who value
-          integrity, collaboration, and growth.
-        </p>
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-[clamp(2rem,6vw,4rem)] font-bold text-center mb-8">Careers at TLO Advocates</h1>
 
-        <div className="text-left space-y-10">
-          <section>
-            <h2 className="text-[clamp(1.5rem,4vw,2rem)] font-semibold mb-4">Why Work With Us?</h2>
-            <ul className="list-disc list-inside space-y-2 text-[clamp(1rem,2.5vw,1.25rem)]">
-              <li>Exposure to high-profile legal matters across industries</li>
-              <li>Supportive mentorship and professional development</li>
-              <li>Flexible, inclusive, and collaborative work culture</li>
-              <li>Opportunities for long-term career advancement</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-[clamp(1.5rem,4vw,2rem)] font-semibold mb-4">Current Openings</h2>
-            <p className="text-[clamp(1rem,2.5vw,1.25rem)]">
-              We are currently hiring for:
-            </p>
-            <ul className="list-disc list-inside mt-2 space-y-2 text-[clamp(1rem,2.5vw,1.25rem)]">
-              <li>Junior Associate – Corporate Law</li>
-              <li>Legal Intern – Summer Program 2025</li>
-            </ul>
-            <p className="mt-4 text-[clamp(1rem,2.5vw,1.25rem)]">
-              To apply, send your CV and cover letter to:{" "}
-              <a href="mailto:careers@tlofirm.com" className="text-blue-600 hover:underline">
-                careers@tlofirm.com
-              </a>
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-[clamp(1.5rem,4vw,2rem)] font-semibold mb-4">Internships</h2>
-            <p className="text-[clamp(1rem,2.5vw,1.25rem)]">
-              Our internship programs give students and recent graduates hands-on experience in real legal work, guided by our team of experienced professionals.
-            </p>
-          </section>
-        </div>
+        <section>
+          <h2 className="text-[clamp(1.5rem,4vw,2rem)] font-semibold mb-4">Apply Now</h2>
+          <form onSubmit={handleSubmit} className="space-y-6" encType="multipart/form-data">
+            <div className="grid sm:grid-cols-2 gap-4">
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Full Name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border rounded text-[#660000] bg-white"
+              />
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Email Address"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border rounded text-[#660000] bg-white"
+              />
+            </div>
+            <select
+              name="position"
+              required
+              value={formData.position}
+              onChange={handleChange}
+              className="w-full px-4 py-3 border rounded text-[#660000] bg-white"
+            >
+              <option value="">Select Position</option>
+              <option value="Junior Associate – Corporate Law">Junior Associate – Corporate Law</option>
+              <option value="Legal Intern – Summer Program 2025">Legal Intern – Summer Program 2025</option>
+            </select>
+            <textarea
+              name="coverLetter"
+              required
+              rows={6}
+              placeholder="Cover Letter"
+              value={formData.coverLetter}
+              onChange={handleChange}
+              className="w-full px-4 py-3 border rounded text-[#660000] bg-white"
+            ></textarea>
+            <input
+              type="file"
+              name="resume"
+              accept=".pdf,.doc,.docx"
+              required
+              onChange={handleFileChange}
+              className="block w-full"
+            />
+            <button
+              type="submit"
+              className="w-full sm:w-fit bg-[#660000] hover:bg-[#8B0000] text-white px-6 py-3 rounded transition"
+            >
+              Submit Application
+            </button>
+          </form>
+        </section>
       </div>
     </main>
   );

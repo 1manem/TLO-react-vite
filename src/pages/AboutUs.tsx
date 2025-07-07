@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import stockImage2 from '../assets/jktmalam.jpg';
 
 const AboutUs = () => {
@@ -5,16 +6,28 @@ const AboutUs = () => {
     <main className="relative min-h-screen bg-white text-[#660000] px-6 sm:px-10 pt-10 pb-10">
       <div className="max-w-[1440px] mx-auto w-full flex flex-col lg:flex-row gap-8">
         {/* Left Image Section */}
-        <div className="w-full lg:w-1/3">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          className="w-full lg:w-1/3"
+        >
           <img
             src={stockImage2}
             alt="Firm Background"
             className="w-full h-full object-cover rounded-xl shadow-lg"
           />
-        </div>
+        </motion.div>
 
         {/* Right Text Section */}
-        <div className="w-full lg:w-2/3 flex flex-col justify-center space-y-6 text-justify">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          className="w-full lg:w-2/3 flex flex-col justify-center space-y-6 text-justify"
+        >
           <h1 className="font-roboto-condensed font-bold text-left text-[clamp(2.5rem,4vw,3rem)]">
             Firm Background
           </h1>
@@ -34,7 +47,7 @@ const AboutUs = () => {
           <p className="font-roboto-condensed font-bold text-[clamp(1rem,2vw,1.25rem)] leading-relaxed">
             The Firm’s Statement of Purpose are (i) serving, helping and adding values to clients, and (ii) help ensuring that clients do the right thing and do the thing right, effectively and efficiently.
           </p>
-        </div>
+        </motion.div>
       </div>
     </main>
   );
